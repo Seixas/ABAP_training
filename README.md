@@ -34,8 +34,8 @@ Apanhado de anotações e informações gerais sobre ABAP
 | `ti_`   | **Tabela interna {de memoria}**     |
 | `s_ `   | valores 'de até' no where é IN por ser range, usando SELECT-OPTIONS     |
 | `p_`   | valores de apenas 1 opcao, parametro, no where é =, usando PARAMETERS     |
-| `cl_`      | Classe      |
-| `if_`      | Interface      |
+| `cl_`   `_cl`   | Classe; Classe ref      |
+| `if_`  `_if`    | Interface; Interface ref      |
 
 
 ### **SE38: utilitarios**
