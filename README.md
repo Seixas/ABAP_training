@@ -34,6 +34,8 @@ Apanhado de anotações e informações gerais sobre ABAP
 | `ti_`   | **Tabela interna {de memoria}**     |
 | `s_ `   | valores 'de até' no where é IN por ser range, usando SELECT-OPTIONS     |
 | `p_`   | valores de apenas 1 opcao, parametro, no where é =, usando PARAMETERS     |
+| `cl_`      | Classe      |
+| `if_`      | Interface      |
 
 
 ### **SE38: utilitarios**
@@ -169,3 +171,14 @@ Statements allowed while working with an internal table of the type SORTED:
 
 If we are using async update, the statement COMMIT WORK is not required because it is executed implicity after each screen change at dialog program.  
 
+Dispatcher is the component of an application server that controls the data traffic between a work process and a presentation server.  
+
+START-OF-SELECTION event generate lists.  
+
+PBO means process before output (of selection screen)  
+PBO modules are executed before the screen is displayed.  
+PBO can be compared with INITIALIZATION and AT SELECTION-SCREEN OUTPUT events and all at selection screen events.  
+  
+PAI means Process after input.  
+PAI modules are executed after any input like pushing the button or pressing enter.  
+PAI can be compared with start-of-selection and all the other events.  
