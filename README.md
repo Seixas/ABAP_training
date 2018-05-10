@@ -6,7 +6,7 @@ Training ABAP
 - Utilities> Settings> ABAP Editor> Pretty Printer> check ident OR play around
 
 
-###**Tabela Transparente { exemplos standard }**
+### **Tabela Transparente { exemplos standard }**
 
 | Table | Description                    |
 | :-------------: | ------------------------------ |
@@ -26,7 +26,7 @@ Training ABAP
 | `p_`   | valores de apenas 1 opcao, parametro, no where é =, usando PARAMETERS     |
 
 
-###**SE38: utilitarios**
+### **SE38: utilitarios**
 >- Programa>Check>Verificacao ampliada
 - Goto>Translate
 
@@ -42,7 +42,7 @@ Training ABAP
 - Loop at ti into wa to do operations
 
 ---
-###**TR - Transport Request**
+### **TR - Transport Request**
 - Objetos $TMP não podem ser transportados. Tu precisa atribuir um pedido de transporte(transport request ou TR) e um pacote valido, então no caso podem.
 - Na SE38 vá na barra de menus e clique Ir Para > Entrada de catálogo de objetos (provavelmente estará $TMP como pacote).
 -Mude para um pacote válido, eles podem ser criados na SE21.
@@ -51,7 +51,7 @@ Training ABAP
 
 -----
 
-###**SE11**
+### **SE11**
 >basic workflow;
 Create the table Z**;
 put fields (common data element mandt);
@@ -70,7 +70,7 @@ foreignkeys;
 append and includes
 
 ---
-###**Search helpers and checks**
+### **Search helpers and checks**
 
 - helper: edit domain of a data element and add value ranges
 checkers: add foreign keys to and field/data element, check generic and delete current entries if has
