@@ -10,7 +10,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Help SAP](https://help.sap.com/)  
 [SAP Community](https://www.sap.com/community.html)  
 [Simulados ABAP](https://www.daypo.net/search.php?t=abap)  
-[O que continuar a estudar como um App Dev](https://blogs.sap.com/2017/01/19/what-should-an-abaper-continue-to-learn-as-an-application-developer/) 
+[O que continuar a estudar como um App Dev](https://blogs.sap.com/2017/01/19/what-should-an-abaper-continue-to-learn-as-an-application-developer/)  
 [Por que programação funcional?](https://stackoverflow.com/questions/36504/why-functional-languages)  
 [Programação funcional em ABAP](https://blogs.sap.com/2015/04/09/funtional-programming-in-abap/)   
 
