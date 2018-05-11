@@ -12,7 +12,8 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Simulados ABAP](https://www.daypo.net/search.php?t=abap)  
 [O que continuar a estudar como um App Dev](https://blogs.sap.com/2017/01/19/what-should-an-abaper-continue-to-learn-as-an-application-developer/)  
 [Por que programação funcional?](https://stackoverflow.com/questions/36504/why-functional-languages)  
-[Programação funcional em ABAP](https://blogs.sap.com/2015/04/09/funtional-programming-in-abap/)   
+[Programação funcional em ABAP](https://blogs.sap.com/2015/04/09/funtional-programming-in-abap/)  
+[Wiki de codigos possivelmente úteis](http://rosettacode.org/wiki/Rosetta_Code)  
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
