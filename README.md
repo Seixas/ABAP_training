@@ -100,7 +100,20 @@ Include(edit>iinclude>insert) > add within first group to be used as KEY(have to
 ---
 
 - COMMENT SELECTION: Ctrl + <
-- DOC FOR DEFINITION: Ctrl+F8 (blue icon I)
+- DOC FOR DEFINITION: Ctrl+F8 (blue icon I)  
+
+---
+Dicas sobre field-symbols  
+Por: Fabio Kazunari  
+
+- Use field-symbols dentro de LOOPs. Saiba exatamente onde estão as teclas < e > do seu teclado para não ter preguiça de declará-los
+- Caso queira reaproveitar um field-symbol depois de um LOOP, não o faça. Você irá esquecer cedo ou tarde o uso do UNASSIGN. Declare outro field-symbol para evitar erros.
+- Se você declarou um field-symbol globalmente no top include, deixe seu celular ligado durante a noite pois você pode precisar… ou melhor… alguém precisar de você
+- Caso você precise de mais de um field-symbol para a mesma tabela interna, dê nomes ilustrativos ao invés de e . Ainda evite copy & paste deste código.
+- Caso esteja usando ABAP Objects, sempre confiro a definição da tabela interna que usarei. Caso ela seja READ-ONLY, evito o field-symbol pois ele é mais poderoso o primeiro.
+> Meu estilo de programação faz uso extensivo de field-symbols. Eu raramente populo uma tabela interna registro por registro ou uso alguma estrutura auxiliar para modificá-la. Como sempre estou usando métodos pequenos, nunca faço o uso de field-symbols globais que possam ser perigosamente reaproveitados por alguém que dê manutenção no código. Caso eu veja algum field-symbol global usado num só FORM ou método, eu o movo para uma declaração local.
+
+[Fonte](http://abap101.com/2013/03/25/field-symbols-sao-suas-vantagens-por-fabio-kazunari/)
 
 ---
 
