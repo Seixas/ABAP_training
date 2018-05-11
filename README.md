@@ -40,7 +40,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 | `p_`   | valores de apenas 1 opcao, parametro, no where é =, usando PARAMETERS     |
 | `cl_`   `_cl`   | Classe; Classe ref      |
 | `if_`  `_if`    | Interface; Interface ref      |
-| `fs_`      | FieldSymbols, nossos <ponteiros>       |
+| `fs_`      | FieldSymbols, nossos ponteiros       |
 
 
 ### **SE38: utilitarios**
