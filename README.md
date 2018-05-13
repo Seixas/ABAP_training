@@ -42,6 +42,15 @@ Apanhado de anotações e informações gerais sobre ABAP
 | `if_`  `_if`    | Interface; Interface ref      |
 | `fs_`      | FieldSymbols, nossos ponteiros       |
 
+### Tabela Interna
+We Have 3 types of Internal Tables  
+
+| Table             | Description                    | Access |
+| :-------------: | ------------------------------ | ------------------------------ |
+| `STANDARD`      | Similar to a Database Table | Accessible by row & keys       |
+| `SORTED`   | Data is always sorted by the specified keys | Accessible by row & keys     |
+| `HASHED`   | Unique keys only | Accessible by keys only (often Fastest way to access)    |
+
 
 ### **SE38: utilitarios**
 >Programa>Check>Verificacao ampliada  
