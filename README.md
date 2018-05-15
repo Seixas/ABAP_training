@@ -17,8 +17,21 @@ Apanhado de anotações e informações gerais sobre ABAP
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
-  Utilities> Settings> ABAP Editor> Pretty Printer> check ident OR play around
-
+  Utilities> Settings> ABAP Editor> Pretty Printer> check ident OR play around  
+  
+**Some Debug info**
+> F1 > info tecnicas, sempre útil  
+  BREAK-POINT - ativa debug em certa linha de um programa  
+  /h  - ativa debug  
+  f7 ate o programa z  
+  f5 step para executar e entrar nos includes/performs  
+  f6 steps de execução sem entrar a fundo  
+  
+**BATCH-INPUT**
+> serve para cadastros e nao relatorios, alterar varios users ao mesmo tempo por ex., automatizando algum fluxo para commitar no banco  
+  memorizar a estrutura BDCDATA  
+  tcodes: LSMW(funcional) / SHDB(abap)  
+  New recording > nome_carga, TCODE >  
 
 ### **Tabela Transparente { exemplos standard }**
 
