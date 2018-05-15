@@ -1,0 +1,88 @@
+  0000100014                                                Docs                                                                                                                                
+  0000100008                                                ABAP Essentials                                                                                                                     
+  0000100015                                                TR                                                                                                                                  
+TR0000100085SCC4                                            Client Administration                                                                                                               
+TR0000100083WE31                                            Development IDoc Segment                                                                                                            
+TR0000100082WE30                                            IDoc Type Development                                                                                                               
+TR0000100081WE81                                            Logical message types                                                                                                               
+  0000100073                                                Scripts                                                                                                                             
+TR0000100069ST05                                            Performance Trace                                                                                                                   
+TR0000100068NACE                                            WFMC: Initial Customizing Screen                                                                                                    
+TR0000100067CG3Z                                            Upload file                                                                                                                         
+TR0000100066CG3Y                                            Download file                                                                                                                       
+TR0000100065SALE                                            Display ALE Customizing                                                                                                             
+TR0000100064SM12                                            Display and Delete Locks                                                                                                            
+  0000100056                                                User related                                                                                                                        
+TR0000100055ST22                                            ABAP Dump Analysis                                                                                                                  
+TR0000100054ST12                                            Single transaction analysis                                                                                                         
+TR0000100053ST11                                            Display Developer Traces                                                                                                            
+TR0000100052ST06                                            Operating System Monitor                                                                                                            
+TR0000100051ST01                                            System Trace                                                                                                                        
+  0000100043                                                Spool                                                                                                                               
+TR0000100042SM66                                            Systemwide Work Process Overview                                                                                                    
+TR0000100041SM63                                            Display/Maintain Operating Mode Sets                                                                                                
+TR0000100040SM59                                            RFC Destinations (Display/Maintain)                                                                                                 
+TR0000100039SM58                                            Asynchronous RFC Error Log                                                                                                          
+TR0000100038SM51                                            List of SAP Systems                                                                                                                 
+TR0000100037SM50                                            Work Process Overview                                                                                                               
+TR0000100036SM49                                            Execute external OS commands                                                                                                        
+TR0000100035SM39                                            Job Analysis                                                                                                                        
+TR0000100034SM35                                            Batch Input Monitoring                                                                                                              
+TR0000100033SM31                                            Call View Maintenance Like SM30                                                                                                     
+TR0000100032SM21                                            Online System Log Analysis                                                                                                          
+TR0000100028SCU0                                            Customizing Cross-System Viewer                                                                                                     
+TR0000100027SCC1                                            Client Copy - Special Selections                                                                                                    
+TR0000100026SCAT                                            Computer Aided Test Tool                                                                                                            
+TR0000100025PFCG                                            Role Maintenance                                                                                                                    
+TR0000100024DB13                                            DBA Planning Calendar                                                                                                               
+TR0000100023DB12                                            DBA Backup Logs                                                                                                                     
+TR0000100022DB03                                            Parameter changes in database                                                                                                       
+TR0000100021DB02                                            Tables and Indexes Monitor                                                                                                          
+TR0000100020DB01                                            Analyze exclusive lockwaits                                                                                                         
+TR0000100019AL08                                            Users Logged On                                                                                                                     
+TR0000800089ST22                                            ABAP Dump Analysis                                                                                                                  
+TR0000800088LSMW                                            Legacy System Migration Workbench                                                                                                   
+TR0000800087SHDB                                            Batch Input Transaction Recorder                                                                                                    
+TR0000800086SAT                                             ABAP Trace                                                                                                                          
+TR0000800084SE14                                            Utilities for Dictionary Tables                                                                                                     
+TR0000800080SMARTFORMS                                      SAP Smart Forms                                                                                                                     
+TR0000800070SE30                                            ABAP Objects Runtime Analysis                                                                                                       
+TR0000800031SE51                                            Screen Painter                                                                                                                      
+TR0000800004SE41                                            Menu Painter                                                                                                                        
+TR0000800005SE91                                            Atualização de mensagem                                                                                                             
+TR0000800030SE93                                            Maintain Transaction Codes                                                                                                          
+TR0000800007SE80                                            Object Navigator                                                                                                                    
+TR0000800012SE54                                            Generate table view                                                                                                                 
+TR0000800011SE38                                            ABAP Editor                                                                                                                         
+TR0000800010SE37                                            ABAP Function Modules                                                                                                               
+TR0000800009SE24                                            Class Builder                                                                                                                       
+TR0000800006SE16                                            Data Browser                                                                                                                        
+TR0000800003SE11                                            ABAP Dictionary: atualização                                                                                                        
+TR0001400072SE62                                            Industry Utilities                                                                                                                  
+TR0001400071SE61                                            SAP Documentation                                                                                                                   
+TR0001400002ABAPDOCU                                        Chamada dos exemplos ABAP                                                                                                           
+TR0001400013ABAPHELP                                        ABAP Documentation                                                                                                                  
+TR0001500029SE01                                            Transport Organizer (Extended)                                                                                                      
+TR0001500018SE09                                            Transport Organizer                                                                                                                 
+TR0001500017SE10                                            Transport Organizer                                                                                                                 
+TR0001500016SE21                                            Package Builder                                                                                                                     
+TR0004300050SPAU                                            Display Modified DE Objects                                                                                                         
+TR0004300049SPAM                                            Support Package Manager                                                                                                             
+TR0004300048SPAD                                            Spool Administration                                                                                                                
+TR0004300047SP12                                            TemSe Administration                                                                                                                
+TR0004300046SP11                                            TemSe directory                                                                                                                     
+TR0004300045SP02                                            Display Spool Requests                                                                                                              
+TR0004300044SP01                                            Output Controller                                                                                                                   
+TR0005600063SU53                                            Evaluate Authorization Check                                                                                                        
+TR0005600062SU2                                             Maintain Own User Parameters                                                                                                        
+TR0005600061SU12                                            Mass Changes to User Master Records                                                                                                 
+TR0005600060SU10                                            User Mass Maintenance                                                                                                               
+TR0005600059SU03                                            Maintain Authorizations                                                                                                             
+TR0005600058SU02                                            Maintain Authorization Profiles                                                                                                     
+TR0005600057SU01                                            User Maintenance                                                                                                                    
+TR0007300079SE77                                            SAPscript Styles Translation                                                                                                        
+TR0007300078SE76                                            SAPscript: Form Translation                                                                                                         
+TR0007300077SE75                                            SAPscript Settings                                                                                                                  
+TR0007300076SE74                                            SAPscript format conversion                                                                                                         
+TR0007300075SE73                                            SAPscript Font Maintenance                                                                                                          
+TR0007300074SE72                                            SAPscript Styles                                                                                                                    
