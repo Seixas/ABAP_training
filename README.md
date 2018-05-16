@@ -30,7 +30,7 @@ Apanhado de anotações e informações gerais sobre ABAP
   
 **BATCH-INPUT**
 > Serve para cadastros e nao relatorios, alterar varios users ao mesmo tempo por ex., automatizando algum fluxo para commitar no banco  
-  Utiliza telas como fluxo e usar apenas quando não houver BAPI
+  Utiliza telas como fluxo e usar apenas quando não houver BAPI  
   Memorizar a estrutura BDCDATA  
   tcodes: LSMW(funcional) / SHDB(abap)  
   New recording > nome_carga, TCODE >  
