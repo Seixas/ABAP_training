@@ -14,6 +14,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Por que programação funcional?](https://stackoverflow.com/questions/36504/why-functional-languages)  
 [Programação funcional em ABAP](https://blogs.sap.com/2015/04/09/funtional-programming-in-abap/)  
 [Wiki de codigos possivelmente úteis](http://rosettacode.org/wiki/Rosetta_Code)  
+[SAPTech tutorials - Custom BAPI ex.](http://saptechnical.com/Tutorials/BAPI/CustomBAPICreation/page1.htm)  
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
@@ -32,6 +33,18 @@ Apanhado de anotações e informações gerais sobre ABAP
   memorizar a estrutura BDCDATA  
   tcodes: LSMW(funcional) / SHDB(abap)  
   New recording > nome_carga, TCODE >  
+  
+**BAPI, BADI**
+> **BAPI stands for Business Application Programming Interface, WebService.**   
+  BAPI - It is nothing, but a FM which is used to load the data into SAP system. The data may be from the Legacy system. They all are RFCs.  
+  **BADI stands for Business Add-Ins, are a new SAP enhancement technique based on ABAP Objects**  
+  BADI - They are the enhancement which can be applied to the standard SAP program as per the business requirement. BADI are the newer version of user exits which uses ABAP OOPs concept.  
+  
+  > - Business Add-Ins are a new SAP enhancement technique based on ABAP Objects. They can be inserted into the SAP System to accommodate user requirements too specific to be included in the standard delivery. Since specific industries often require special functions, SAP allows you to predefine these points in your software.  
+As with customer exits two different views are available:  
+In the definition view, an application programmer predefines exit points in a source that allow specific industry sectors, partners, and customers to attach additional software to standard SAP source code without having to modify the original object.  
+In the implementation view, the users of Business Add-Ins can customize the logic.  
+BAPI (Business Application Programming Interface) is a set of interfaces to object-oriented programming methods that enable a programmer to integrate third-party software into the proprietary R/3 product from SAP.BAPI are implemented and stored in the the R/3 system as remote function call (RFC) modules.  
 
 ### **Tabela Transparente { exemplos standard }**
 
