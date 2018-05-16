@@ -46,6 +46,12 @@ As with customer exits two different views are available:
 In the definition view, an application programmer predefines exit points in a source that allow specific industry sectors, partners, and customers to attach additional software to standard SAP source code without having to modify the original object.  
 In the implementation view, the users of Business Add-Ins can customize the logic.  
 BAPI (Business Application Programming Interface) is a set of interfaces to object-oriented programming methods that enable a programmer to integrate third-party software into the proprietary R/3 product from SAP.BAPI are implemented and stored in the the R/3 system as remote function call (RFC) modules.  
+  
+  > - BADI is just an object-oriented version of user-exit. Instead of entering program code into some function module (as in customer-exit), you define some class which has to implement predefined methods and those methods are fired at predefined points just like an old user-exit. Some BADI can have multiple independent implementations which is much better for software deployment as several developers can implement the same BADI independently.  
+To understand BAPIs, we must know that there are 2 things. One is the SAP Object Repository of the Business Object Repository (BOR) and the Function Builder.  
+Now the business objects with their business processes and business data, reside in the BOR, with the corresponding BAPI. the implementation of this BAPI resides in the function builder. Any external world (non SAP) programs or legacy systems can access the business processes or data of any business object in the BOR, thru the process of invoking the BAPI implementation of the BAPI for this business object.  
+Thus we can access a business object.  
+So we can say that a BAPI is a process that allows third party s/w or non SAP programs to access SAP Business object data and processes.  
 
 ### **Tabela Transparente { exemplos standard }**
 
