@@ -1,0 +1,109 @@
+*&---------------------------------------------------------------------*
+*& Report  ZCOMMENTARY_WRITE_FM
+*&---------------------------------------------------------------------*
+
+REPORT ZCOMMENTARY_WRITE_FM.
+TYPE-POOLS SLIS.
+TABLES EKKO.
+
+SELECT-OPTIONS S_EBELN FOR EKKO-EBELN.
+TYPES: BEGIN OF TY_EKKO,
+       EBELN TYPE EKKO-EBELN,
+       BEDAT TYPE EKKO-BEDAT,
+       KUNNR TYPE EKKO-KUNNR,
+       END OF TY_EKKO.
+
+DATA: WA_EKKO TYPE TY_EKKO,
+      IT_EKKO TYPE TABLE OF TY_EKKO.
+
+* Declaring the field catalog.
+DATA: IT_FCAT TYPE SLIS_T_FIELDCAT_ALV,
+      WA_FCAT LIKE LINE OF IT_FCAT.
+
+* Filling the data internal table.
+SELECT EBELN BEDAT KUNNR
+  FROM EKKO
+  INTO TABLE IT_EKKO
+  WHERE EBELN IN S_EBELN.
+
+* Filling the field catalog
+WA_FCAT-FIELDNAME = 'EBELN'.
+WA_FCAT-COL_POS = '1'.
+WA_FCAT-SELTEXT_M = 'PUR DOC'.
+APPEND WA_FCAT TO IT_FCAT.
+CLEAR WA_FCAT.
+
+WA_FCAT-FIELDNAME  =  'BEDAT'.
+WA_FCAT-COL_POS  =  '2'.
+WA_FCAT-SELTEXT_M  =  'DOC DATE'.
+APPEND WA_FCAT TO IT_FCAT.
+CLEAR WA_FCAT.
+
+WA_FCAT-FIELDNAME  =  'KUNNR'.
+WA_FCAT-COL_POS  =  '3'.
+WA_FCAT-SELTEXT_M  =  'CUSTOMER'.
+APPEND WA_FCAT TO IT_FCAT.
+CLEAR WA_FCAT.
+
+*  Declare two event internal tables.
+DATA: IT_EVENT TYPE SLIS_T_EVENT,
+WA_EVENT LIKE LINE OF IT_EVENT.
+
+*  Filling the event IT.
+WA_EVENT-NAME  =  'TOP_OF_PAGE'.
+WA_EVENT-FORM  =  'TOP'.
+
+PERFORM TOP.
+PERFORM END.
+APPEND WA_EVENT TO IT_EVENT.
+
+WA_EVENT-NAME  =  'END_OF_LIST'.
+WA_EVENT-FORM  =  'END'.
+APPEND WA_EVENT TO IT_EVENT.
+
+* Display output
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+      EXPORTING
+        I_CALLBACK_PROGRAM = SY-CPROG
+        IT_FIELDCAT  = IT_FCAT
+        IT_EVENTS  = IT_EVENT      
+      TABLES
+        T_OUTTAB  = IT_EKKO.
+
+*&---------------------------------------------------------------------*
+*& FORM TOP
+*&---------------------------------------------------------------------*
+FORM TOP.
+DATA: IT_LIST TYPE SLIS_T_LISTHEADER,
+WA_LIST LIKE LINE OF IT_LIST.
+WA_LIST-INFO  = 'THESE ARE PO DETAILS'.
+
+WA_LIST-TYP  =  'H'.
+APPEND WA_LIST TO IT_LIST.
+WA_LIST-INFO  = 'SAP TECHNOLOGIES'.
+
+WA_LIST-TYP  =  'S'.
+APPEND WA_LIST TO IT_LIST.
+
+CALL FUNCTION 'REUSE_ALV_COMMENTARY_WRITE'
+EXPORTING
+IT_LIST_COMMENTARY = IT_LIST
+I_LOGO  = 'VA'.
+
+ENDFORM.
+
+*&---------------------------------------------------------------------*
+*& FORM END
+*&---------------------------------------------------------------------*
+FORM END.
+DATA: IT_LIST1 TYPE SLIS_T_LISTHEADER,
+      WA_LIST1 LIKE LINE OF IT_LIST1.
+
+WA_LIST1-INFO  =  'SR JOHN DOE'.
+WA_LIST1-TYP  = 'A'.
+APPEND WA_LIST1 TO IT_LIST1.
+
+CALL FUNCTION 'REUSE_ALV_COMMENTARY_WRITE'
+     EXPORTING
+       IT_LIST_COMMENTARY = IT_LIST1.
+ENDFORM.
