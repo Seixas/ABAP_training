@@ -16,6 +16,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Wiki de codigos possivelmente úteis](http://rosettacode.org/wiki/Rosetta_Code)  
 [SAPTech tutorials - Custom BAPI ex.](http://saptechnical.com/Tutorials/BAPI/CustomBAPICreation/page1.htm)  
 [BAPI stepbystep.pdf](https://archive.sap.com/kmuuid2/200dd1cc-589e-2910-98a9-bb2c48b78dfa/BAPI%20Step-by-Step.pdf)  
+[Amarm ABAP Tutorials](http://www.amarmn.com/p/abap-tutorials.html)  
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
