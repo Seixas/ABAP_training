@@ -14,7 +14,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Por que programação funcional?](https://stackoverflow.com/questions/36504/why-functional-languages)  
 [Programação funcional em ABAP](https://blogs.sap.com/2015/04/09/funtional-programming-in-abap/)  
 [Wiki de codigos possivelmente úteis](http://rosettacode.org/wiki/Rosetta_Code)  
-[SAPTech tutorials - Custom BAPI ex.](http://saptechnical.com/Tutorials/BAPI/CustomBAPICreation/page1.htm) 
+[SAPTech tutorials - Custom BAPI ex.](http://saptechnical.com/Tutorials/BAPI/CustomBAPICreation/page1.htm)  
 [BAPI stepbystep.pdf](https://archive.sap.com/kmuuid2/200dd1cc-589e-2910-98a9-bb2c48b78dfa/BAPI%20Step-by-Step.pdf)  
 
 **Configs uteis**
