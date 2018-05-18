@@ -18,6 +18,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [BAPI stepbystep.pdf](https://archive.sap.com/kmuuid2/200dd1cc-589e-2910-98a9-bb2c48b78dfa/BAPI%20Step-by-Step.pdf)  
 [Amarm ABAP Tutorials](http://www.amarmn.com/p/abap-tutorials.html)  
 [SE80 uk](http://www.se80.co.uk/)  
+[ABAP Junior - Enhancements](http://abapjuniores.blogspot.com.br/2011/11/enhancements-modificando-o-standard.html)  
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
