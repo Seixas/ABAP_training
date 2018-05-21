@@ -19,6 +19,7 @@ Apanhado de anotações e informações gerais sobre ABAP
 [Amarm ABAP Tutorials](http://www.amarmn.com/p/abap-tutorials.html)  
 [SE80 uk](http://www.se80.co.uk/)  
 [ABAP Junior - Enhancements](http://abapjuniores.blogspot.com.br/2011/11/enhancements-modificando-o-standard.html)  
+[AbapBrasil Base de conhecimento](https://abapbrasil.wordpress.com/category/abap/module-pool-programas-on-line/)  
 
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
