@@ -247,3 +247,12 @@ PBO can be compared with INITIALIZATION and AT SELECTION-SCREEN OUTPUT events an
 PAI means Process after input.  
 PAI modules are executed after any input like pushing the button or pressing enter.  
 PAI can be compared with start-of-selection and all the other events.  
+
+Find BADI in a minute:
+1. Go to the TCode SE24 and enter CL_EXITHANDLER as object type.
+2. In 'Display' mode, go to 'Methods' tab.
+3. Double click the method 'Get Instance' to display it source code.
+4. Set a breakpoint on 'CALL METHOD cl_exithandler=>get_class_name_by_interface'.
+5. Then run your transaction.
+6. The screen will stop at this method.
+7. Check the value of parameter 'EXIT_NAME'. It will show you the BADI for that transaction.
