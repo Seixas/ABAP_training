@@ -256,3 +256,6 @@ Find BADI in a minute:
 5. Then run your transaction.
 6. The screen will stop at this method.
 7. Check the value of parameter 'EXIT_NAME'. It will show you the BADI for that transaction.
+
+
+Para adicionar função customizada em um fullscreen ALV é necessário copiar um 'GUI Status' como STANDARD na SE90, de um programa standard como SAPLSALV ou SAPLKKBL, modifica-lo dentro do report Z adicionando a função e icone, depois adiciona-lo no abap set_screen_status do salv table.
