@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report ZTESTALVSEL
 *&---------------------------------------------------------------------*
-*& alv fullscreen, obrigatorio usar GUI Status para isso
+*&
 *&---------------------------------------------------------------------*
 REPORT ZTESTALVSEL.
 
@@ -9,7 +9,7 @@ REPORT ZTESTALVSEL.
 CLASS lcl_handle_events DEFINITION DEFERRED.
 *... §5 object for handling the events of cl_salv_table
 DATA: gr_events TYPE REF TO lcl_handle_events.
-DATA: g_okcode TYPE syucomm.
+"DATA: g_okcode TYPE syucomm.
 
 ************************************************************************
 **   Global class references                                          **
@@ -91,13 +91,9 @@ ENDCLASS.                    "lcl_handle_events DEFINITION
 *---------------------------------------------------------------------*
 CLASS lcl_handle_events IMPLEMENTATION.
   METHOD on_user_command.
-   perform handle_user_command using e_salv_function.
+    perform handle_user_command using e_salv_function.
   ENDMETHOD.                    "on_user_command
-
-
 ENDCLASS.                    "lcl_handle_events IMPLEMENTATION
-
-
 
 
 ************************************************************************
@@ -167,21 +163,27 @@ DATA l_text TYPE string.
 
 
 
-gr_functions = gr_table->get_functions( ).
-
-gr_table->set_screen_status( pfstatus = 'STANDARD'
-                             report = 'ZTESTALVSEL'
-                             set_functions = gr_table->c_functions_all ).
+*gr_functions = gr_table->get_functions( ).
+*
+*gr_table->set_screen_status( pfstatus = 'SALV_STANDARD'
+*                             report = 'ZTESTALVSEL'
+*                             set_functions = gr_table->c_functions_all ).
 
   gr_display = gr_table->get_display_settings( ).
-"Zebra
+  gr_display->set_list_header( 'Heading customizado' ).
   gr_display->set_striped_pattern( abap_true ).
 
 *--------------------------------------------------------------------*
-* Functions
+* Functions and Events for such
 *--------------------------------------------------------------------*
 *... §6 register to the events of cl_salv_table
   data: lr_events type ref to cl_salv_events_table.
+
+gr_functions = gr_table->get_functions( ).
+
+gr_table->set_screen_status( pfstatus = 'SALV_STANDARD'
+                             report = 'ZTESTALVSEL'
+                             set_functions = gr_table->c_functions_all ).
 
   lr_events = gr_table->get_event( ).
 
@@ -190,6 +192,16 @@ gr_table->set_screen_status( pfstatus = 'STANDARD'
 *... §6.1 register to the event USER_COMMAND
   set handler gr_events->on_user_command for lr_events.
 
+
+  data: lo_selections type ref to cl_salv_selections.
+  data lt_rows type salv_t_row.
+  data ls_row type i.
+
+  lo_selections = gr_table->get_selections( ).
+*... §7.1 set selection mode
+  lo_selections->set_selection_mode( if_salv_c_selection_mode=>ROW_COLUMN ).
+
+  gr_table->display( ).
 *&---------------------------------------------------------------------*
 *&      Form  HANDLE_USER_COMMAND
 *&---------------------------------------------------------------------*
@@ -213,9 +225,10 @@ ENDFORM.
 *  <--  p2        text
 *----------------------------------------------------------------------*
 FORM get_selections .
-"definir o que fazer, selecoes, pdf, outro alv etc
+
+  lt_rows = lo_selections->get_selected_rows( ).
+  loop at lt_rows into ls_row.
+    read table ti_output ASSIGNING <fs_output> index ls_row.
+  ENDLOOP.
   BREAK-POINT.
 ENDFORM.
-
-
-  gr_table->display( ).
