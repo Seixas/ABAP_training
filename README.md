@@ -259,3 +259,7 @@ Find BADI in a minute:
 
 
 Para adicionar função customizada em um fullscreen ALV é necessário copiar um 'GUI Status' como STANDARD na SE90 ou SE41, de um programa standard como SAPLSALV ou SAPLKKBL, modifica-lo dentro do report Z adicionando a função e icone, depois adiciona-lo no abap set_screen_status do salv table.
+
+
+Bug in SE80 width> Go to SE16, edit the table RSEUMOD, for your user, increase the value of WIDTH to say 200 and save, then try SE80 again.
+(SE16: Display and mark the records you want to change or delete, show detail view (F7). Enter /h to activate debugger, ENTER. You find yourself in debugger in form set_status_val. Change the value of variable code to 'DELE' for deletion, 'EDIT' for change or 'INSR', then F8 to continue. Now the respective function is active. )
