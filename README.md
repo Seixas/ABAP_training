@@ -21,6 +21,9 @@ Apanhado de anotações e informações gerais sobre ABAP
 [ABAP Junior - Enhancements](http://abapjuniores.blogspot.com.br/2011/11/enhancements-modificando-o-standard.html)  
 [AbapBrasil Base de conhecimento](https://abapbrasil.wordpress.com/category/abap/module-pool-programas-on-line/)  
 
+[ABAP on Eclipse for S4H](https://sapyard.com/abap-on-sap-hana-part-ii/)  
+
+
 **Configs uteis**
 > Ajustar layout>opções> Design interativo> Visualização & interação> marcar 2 flags em Controles  
   Utilities> Settings> ABAP Editor> Pretty Printer> check ident OR play around  
