@@ -266,3 +266,8 @@ Para adicionar função customizada em um fullscreen ALV é necessário copiar u
 
 Bug in SE80 width> Go to SE16, edit the table RSEUMOD, for your user, increase the value of WIDTH to say 200 and save, then try SE80 again.
 (SE16: Display and mark the records you want to change or delete, show detail view (F7). Enter /h to activate debugger, ENTER. You find yourself in debugger in form set_status_val. Change the value of variable code to 'DELE' for deletion, 'EDIT' for change or 'INSR', then F8 to continue. Now the respective function is active. )
+
+
+ENHANCEMENT-POINT static  = only for declarations
+ENHANCEMENT-POINT         = code in the block
+ENHANCEMENT-POINT section = if implemented a Z, it ignores standard and execute our Z implementation
