@@ -23,12 +23,12 @@ PERFORM zf_preencher_bdcdata TABLES tl_bdcdata
               ''                    ''        ''    'BDC_OKCODE'            '=BTN_SALVAR'.
 
     "Executar o batch input
-    CALL TRANSACTION 'ZTRN_T_CADASTRO_LCG' "Transação executada
-      USING tl_bdcdata          "As ações a serem executadas
-      MESSAGES INTO tl_message  "Captura todas message da execução
-      MODE vl_mode. " A - Exibir todas as telas
-    " E - Somente vai exibir se houver message type E
-    " N - Background
+    CALL TRANSACTION 'ZTRN_T_CADASTRO_LCG' "tcode tobe executed
+      USING tl_bdcdata          "Actions tobe executed
+      MESSAGES INTO tl_message  "Capture all execution messages
+      MODE vl_mode. " A - Show all screens, only mode for debugging
+                    " E - Only show if some type E message is called
+                    " N - Background, can't debug screen
     
 
 FORM zf_preencher_bdcdata  TABLES   pt_bdcdata STRUCTURE bdcdata
