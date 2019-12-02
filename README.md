@@ -271,3 +271,7 @@ Bug in SE80 width> Go to SE16, edit the table RSEUMOD, for your user, increase t
 ENHANCEMENT-POINT static  = only for declarations  
 ENHANCEMENT-POINT         = code in the block  
 ENHANCEMENT-POINT section = if implemented a Z, it ignores standard and execute our Z implementation  
+
+
+add GUI PF STATUS in standard, implicit  
+SET PF-STATUS 'STANDARD' OF PROGRAM 'SAPLKKBL' EXCLUDING lv_extab."#EC *.  
