@@ -275,3 +275,6 @@ ENHANCEMENT-POINT section = if implemented a Z, it ignores standard and execute 
 
 add GUI PF STATUS in standard, implicit  
 SET PF-STATUS 'STANDARD' OF PROGRAM 'SAPLKKBL' EXCLUDING lv_extab."#EC *.  
+
+
+SAP Icons: run program RSTXICON  
