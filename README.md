@@ -282,3 +282,8 @@ SAP Icons: run program RSTXICON
 #Find enhancement and project name of an User exit:  
 table MODSAP to get enhancement if you have function exit (e.g. EXIT_SAPLV60B_010)  
 table MODACT give field member(enhancement)  
+
+
+program RPR_ABAP_SOURCE_SCAN  
+you can specify a text string in the selection screen.  
+try to search with 'UPDATE Z', 'DELETE Z' keywords. Also give package if you know it.  
