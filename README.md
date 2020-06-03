@@ -287,3 +287,5 @@ table MODACT give field member(enhancement)
 program RPR_ABAP_SOURCE_SCAN  
 you can specify a text string in the selection screen.  
 try to search with 'UPDATE Z', 'DELETE Z' keywords. Also give package if you know it.  
+  
+'SAPBC_DATA_GENERATOR' is the program provided by SAP to fill these tables in your system, which can also be accessed through the standard transaction 'BC_DATA_GEN'.
