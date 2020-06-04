@@ -288,4 +288,10 @@ program RPR_ABAP_SOURCE_SCAN
 you can specify a text string in the selection screen.  
 try to search with 'UPDATE Z', 'DELETE Z' keywords. Also give package if you know it.  
   
-'SAPBC_DATA_GENERATOR' is the program provided by SAP to fill these tables in your system, which can also be accessed through the standard transaction 'BC_DATA_GEN'.
+'SAPBC_DATA_GENERATOR' is the program provided by SAP to fill these tables in your system, which can also be accessed through the standard transaction 'BC_DATA_GEN'.  
+  
+  
+### ABAP on Eclipse  
+https://tools.hana.ondemand.com/#abap > new project > choose ABAP > here we enter connection details of server  
+within Eclipse, for block selection use *Shift+Alt+A*  
+After, try SAPWebIDE Personal Edition and connect it to a System
