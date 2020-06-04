@@ -293,5 +293,7 @@ try to search with 'UPDATE Z', 'DELETE Z' keywords. Also give package if you kno
   
 ### ABAP on Eclipse  
 https://tools.hana.ondemand.com/#abap > new project > choose ABAP > here we enter connection details of server  
-within Eclipse, for block selection use *Shift+Alt+A*  
+within Eclipse, for block selection use **Shift + Alt + A**  
+**Ctrl + Shift + Y** for lowercase.  
+**Ctrl + Shift + X** for uppercase.  
 After, try SAPWebIDE Personal Edition and connect it to a System
