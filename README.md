@@ -290,6 +290,8 @@ try to search with 'UPDATE Z', 'DELETE Z' keywords. Also give package if you kno
   
 'SAPBC_DATA_GENERATOR' is the program provided by SAP to fill these tables in your system, which can also be accessed through the standard transaction 'BC_DATA_GEN'.  
   
+### ranges
+for autoincrement some Z ids and etc. use NUMBER_GET_NEXT fm and passrange object and respective NR_RANGE_NR, the object is created at SNRO, pass the domain of the wanted field and than goto->intervals(f7).  
   
 ### ABAP on Eclipse  
 https://tools.hana.ondemand.com/#abap > new project > choose ABAP > here we enter connection details of server  
