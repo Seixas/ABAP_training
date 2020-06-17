@@ -5,6 +5,8 @@
 *&---------------------------------------------------------------------*
 REPORT ZPC.
 
+DATA t0 TYPE i.
+
 PERFORM f_fetch_data.
 
 *&---------------------------------------------------------------------*
@@ -42,7 +44,7 @@ FORM F_FETCH_DATA .
           vbtyp
     FROM vbak
     INTO CORRESPONDING FIELDS OF TABLE it_vbak
-    UP TO 100 rows.
+    UP TO 1000 rows.
 
   IF sy-subrc = 0 AND it_vbak IS NOT INITIAL.
 
@@ -66,14 +68,17 @@ FORM F_FETCH_DATA .
 **********************************************************************
 * REALLY BAD PERFORMANCE, create a lot of noise
 **********************************************************************
+*  GET RUN TIME FIELD DATA(t1).
 *  LOOP AT it_vbak INTO wa_vbak.
 *    LOOP AT it_vbap INTO wa_vbap WHERE vbeln = wa_vbak-vbeln.
 *      wa_final-vbeln = wa_vbak-vbeln.
-*      wa_final-matnr = wa_vbak-matnr.
+*      wa_final-matnr = wa_vbap-matnr.
 *      APPEND wa_final TO it_final.
-*      CLEAR it_final.
+*      CLEAR wa_final.
 *    ENDLOOP.
 *  ENDLOOP.
+*  GET RUN TIME FIELD DATA(t2).
+*  t0 = t2 - t1.
 **********************************************************************
 
 **********************************************************************
@@ -104,8 +109,10 @@ FORM F_FETCH_DATA .
 * So, in resume, we are NOT scanning the complete table through loops
 * BETTER PERFORMANCE, a lot less noise
 **********************************************************************
+
   DATA lv_index TYPE sy-index.
   SORT: it_vbak, it_vbap. "[Step 01]
+  GET RUN TIME FIELD DATA(t3).
   LOOP AT it_vbak INTO wa_vbak. "[Step 02]
     READ TABLE it_vbap INTO wa_vbap WITH KEY vbeln = wa_vbak-vbeln BINARY SEARCH. "[Step 03]
     IF sy-subrc = 0. "[Step 04]
@@ -115,17 +122,19 @@ FORM F_FETCH_DATA .
           wa_final-vbeln = wa_vbak-vbeln.
           wa_final-matnr = wa_vbap-matnr.
           APPEND wa_final TO it_final.
-          CLEAR it_final.
+          CLEAR wa_final.
         ELSE.
           CLEAR lv_index.
           EXIT.
         ENDIF.
-        "WRITE : / wa_final-vbeln, wa_final-matnr. "[Step 08] here or loop after done for easier debug
+        WRITE : / wa_final-vbeln, wa_final-matnr. "[Step 08] here or loop after done for easier debug
       ENDLOOP.
     ENDIF.
   ENDLOOP.
+  GET RUN TIME FIELD DATA(t4).
+  t0 = t4 - t3.
 **********************************************************************
-
+  WRITE: t0.
   LOOP AT it_final INTO wa_final. "[Step 08]
     WRITE : / wa_final-vbeln, wa_final-matnr.
   ENDLOOP.
