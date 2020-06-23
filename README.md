@@ -298,4 +298,11 @@ https://tools.hana.ondemand.com/#abap > new project > choose ABAP > here we ente
 within Eclipse, for block selection use **Shift + Alt + A**  
 **Ctrl + Shift + Y** for lowercase.  
 **Ctrl + Shift + X** for uppercase.  
-After, try SAPWebIDE Personal Edition and connect it to a System
+After, try SAPWebIDE Personal Edition and connect it to a System  
+  
+### STVARC
+Goto - SE11 : Give the table name TVARVC - > utilities -> table contents -> create entries-> Enter the details -> save directly  
+- Goto - se01 : create customizing request  
+- Diplay the table contents from se11 -> select the check box for your entries - > Go to Table Entry ->Transport entries. Here it wll ask the customizing req no then save your entries.with this transport you can move the entries to production system  
+
+
