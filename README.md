@@ -310,7 +310,8 @@ Goto - SE11 : Give the table name TVARVC - > utilities -> table contents -> crea
 - Job is created at SM36 and selected in SM37 (jobs monitoring)  
 - Background job you can debug by going to SM37, type in 'JDBG' in the command line ( no '/' ), put the cursor on the job and press enter  
 we get some use cases which we can debbug in other ways like RSWAITSEC and BTCLOOP within production env, [check here](https://blogs.sap.com/2016/01/26/debug-background-job-with-ease/). Job log will output all MESSAGE commands, make use of SY-BATCH eq 'X' if necessary and AL11 & CG3Z in case of file uploads and retrieving it as well (jobs skip selection screen event...), the program CACS_FILE_COPY maybe usefull in some cases to copy files from Application to Presentation Server and Presentation to Application.  
-- Variant is created within a Report or SHD0 & SHDS for creation of transaction variant, their info is within tables VARI & TVARV. Reminder if we use   
+- Variant is created within a Report or SHD0 & SHDS for creation of transaction variant, their info is within tables VARI & TVARV. RS_VARIANT_CONTENTS & 
+RS_VARIANT_VALUES_TECH_DATA to view content including runtime ones(initiated with &000..001). RS_ALL_VARIANTS_4_1_REPORT to view all variants of a program. SY-SLSET is the variant in runtime.  
 
 ### AL11(app files directories) CG3Y(download) CG3Z(upload)  
 AL11 transaction is used for controlling the files stored in the application server. All the directories can be seen in the AL11 directory. The basic process which can be done in AL11 transaction such as uploading, downloading and deleting the files.  
