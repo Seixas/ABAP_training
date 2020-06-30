@@ -306,10 +306,54 @@ Goto - SE11 : Give the table name TVARVC - > utilities -> table contents -> crea
 - Diplay the table contents from se11 -> select the check box for your entries - > Go to Table Entry ->Transport entries. Here it wll ask the customizing req no then save your entries.with this transport you can move the entries to production system  
   
 ### Variants & Jobs
-Give the program name in PROGNAME and you will get the corresponding Job Name in tables TBTCO & TBTCP or view V_OP  
-Job is created at SM36 and selected in SM37 (jobs monitoring)  
-Background job you can debug by going to SM37, type in 'JDBG' in the command line ( no '/' ), put the cursor on the job and press enter  
-we get some use cases which we can debbug in other ways like RSWAITSEC and BTCLOOP within production env, [check here](https://blogs.sap.com/2016/01/26/debug-background-job-with-ease/)  
-Variant is created within a Report or SHD0 & SHDS for creation of transaction variant, their info is within tables VARI & TVARV  
+- Give the program name in PROGNAME and you will get the corresponding Job Name in tables TBTCO & TBTCP or view V_OP  
+- Job is created at SM36 and selected in SM37 (jobs monitoring)  
+- Background job you can debug by going to SM37, type in 'JDBG' in the command line ( no '/' ), put the cursor on the job and press enter  
+we get some use cases which we can debbug in other ways like RSWAITSEC and BTCLOOP within production env, [check here](https://blogs.sap.com/2016/01/26/debug-background-job-with-ease/). Job log will output all MESSAGE commands, make use of SY-BATCH eq 'X' if necessary and AL11 & CG3Z in case of file uploads and retrieving it as well (jobs skip selection screen event...), the program CACS_FILE_COPY maybe usefull in some cases to copy files from Application to Presentation Server and Presentation to Application.  
+- Variant is created within a Report or SHD0 & SHDS for creation of transaction variant, their info is within tables VARI & TVARV. Reminder if we use   
 
-
+### AL11(app files directories) CG3Y(download) CG3Z(upload)  
+AL11 transaction is used for controlling the files stored in the application server. All the directories can be seen in the AL11 directory. The basic process which can be done in AL11 transaction such as uploading, downloading and deleting the files.  
+  
+**Uploading a file in Al11 Directory.**  
+**Step 1:** Located the file location in which we have to upload the file.  
+  
+- AL11  
+**Step 2:** Go to Transaction CG3Z for uploading a file in the AL11 directory.  
+  
+**Step 3:** Enter the Source file location from the front end system and the target file location in the AL11 directory. After entering the path click on upload button.  
+  
+- CG3Z  
+Transfer format for Data ( by default, it is set to BIN for Binary)  
+Overwrite file: is a checkbox if checked will overwrite the destination file if it exists already.  
+A message will be displayed.  
+  
+Now directory will contain the uploaded file.  
+  
+Text.txt uploaded  
+  
+**Downloading a file from AL11 Directory**  
+**Step 1:** Locate the file which we want to download to our local system.  
+  
+**Step 2:** Go to Transaction CG3Y.  
+  
+**Step 3:** Enter the Source location and the target location and click on download button.  
+  
+- CG3Y  
+The file gets downloaded successfully with the below message.  
+  
+**Deleting a file in AL11 directory.**  
+We can use a function module for deleting the file from AL11 directory. Please find the below steps.  
+**Step 1:** Go to Transaction SE37, enter Function module name EPS_DELETE_FILE and click on execute button.  
+  
+**SE37 Function Builder**  
+**Step 2:** Enter the File name in the FILE_NAME and the directory path (Excluding the file name) in the DIR_NAME and execute.  
+  
+- EPS_DELETE_FILE  
+The file will be disappeared from the location.  
+  
+The files get deleted successfully.  
+  
+**SAP Copy File with CACS_FILE_COPY**  
+This Program CACS_FILE_COPY is very useful also.  
+In fact, the huge advantage of the CACS_FILE_COPY SAP Standard Report is the fact that you use it to Copy SAP File from Application to Presentation Server and Presentation to Application.  
