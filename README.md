@@ -304,5 +304,12 @@ After, try SAPWebIDE Personal Edition and connect it to a System
 Goto - SE11 : Give the table name TVARVC - > utilities -> table contents -> create entries-> Enter the details -> save directly  
 - Goto - se01 : create customizing request  
 - Diplay the table contents from se11 -> select the check box for your entries - > Go to Table Entry ->Transport entries. Here it wll ask the customizing req no then save your entries.with this transport you can move the entries to production system  
+  
+### Variants & Jobs
+Give the program name in PROGNAME and you will get the corresponding Job Name in tables TBTCO & TBTCP or view V_OP  
+Job is created at SM36 and selected in SM37 (jobs monitoring)  
+Background job you can debug by going to SM37, type in 'JDBG' in the command line ( no '/' ), put the cursor on the job and press enter  
+we get some use cases which we can debbug in other ways like RSWAITSEC and BTCLOOP within production env, [check here](https://blogs.sap.com/2016/01/26/debug-background-job-with-ease/)  
+Variant is created within a Report or SHD0 & SHDS for creation of transaction variant, their info is within tables VARI & TVARV  
 
 
